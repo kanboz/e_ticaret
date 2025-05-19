@@ -1,8 +1,8 @@
 
 
-package org.example; // Doğru paket tanımlaması
+package org.example;
 
- // ui.UserUI sınıfını buradan kullanıyoruz
+
 import javax.swing.*;
 
 public class Main {
@@ -15,7 +15,7 @@ public class Main {
 
         SwingUtilities.invokeLater(() -> {
             UserUI userUI = new UserUI();
-            userUI.setVisible(true); // Kullanıcı arayüzünü görünür yap
+            userUI.setVisible(true);
         });
     }
 }

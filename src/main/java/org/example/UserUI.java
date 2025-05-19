@@ -14,13 +14,13 @@ public class UserUI extends JFrame {
     }
 
     private void initUI() {
-        // Başlık etiketi
+
         JLabel titleLabel = new JLabel("E-Ticaret Yönetim Paneli", JLabel.CENTER);
         titleLabel.setFont(new Font("Segoe UI", Font.BOLD, 26));
         titleLabel.setForeground(new Color(30, 60, 90));
         titleLabel.setBorder(BorderFactory.createEmptyBorder(20, 0, 20, 0));
 
-        // Butonlar
+
         JButton productButton = new JButton("📦 Ürünleri Yönet");
         JButton orderButton = new JButton("🛒 Siparişleri Görüntüle");
         JButton reportButton = new JButton("📊 Raporları Görüntüle");
@@ -34,12 +34,12 @@ public class UserUI extends JFrame {
             btn.setPreferredSize(new Dimension(250, 50));
         }
 
-        // Butonlara action listener
+
         productButton.addActionListener(e -> new ProductUI().setVisible(true));
         orderButton.addActionListener(e -> new OrderUI().setVisible(true));
         reportButton.addActionListener(e -> new ReportUI().setVisible(true));
 
-        // Butonları içeren panel
+
         JPanel buttonPanel = new JPanel(new GridLayout(3, 1, 15, 15));
         buttonPanel.setBorder(BorderFactory.createEmptyBorder(20, 100, 20, 100));
         buttonPanel.setBackground(Color.WHITE);
@@ -48,7 +48,7 @@ public class UserUI extends JFrame {
         buttonPanel.add(orderButton);
         buttonPanel.add(reportButton);
 
-        // Ana panel
+
         JPanel mainPanel = new JPanel(new BorderLayout());
         mainPanel.setBackground(Color.WHITE);
         mainPanel.add(titleLabel, BorderLayout.NORTH);

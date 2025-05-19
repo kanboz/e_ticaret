@@ -1,6 +1,6 @@
 
 
-// Dosya: src/ui/ProductUI.java
+
 package org.example;
 
 import com.mongodb.client.*;
@@ -16,7 +16,7 @@ import java.util.Vector;
 public class ProductUI extends JFrame {
     private JTextField nameField, priceField, stockField;
     private JButton addButton, updateButton, deleteButton, refreshButton;
-    private JTable productTable;
+    JTable productTable;
     private DefaultTableModel tableModel;
 
     private Connection mysqlConn;
@@ -87,7 +87,7 @@ public class ProductUI extends JFrame {
         }
     }
 
-    private void addProduct() {
+    void addProduct() {
         String name = nameField.getText();
         double price = Double.parseDouble(priceField.getText());
         int stock = Integer.parseInt(stockField.getText());
@@ -156,7 +156,7 @@ public class ProductUI extends JFrame {
         }
     }
 
-    private void loadProducts() {
+    void loadProducts() {
         try {
             tableModel.setRowCount(0);
             Statement stmt = mysqlConn.createStatement();
